@@ -1,0 +1,18 @@
+$colors: (
+  --black: #0D114F,
+  --white: #FAFAFA,
+  --red: #E83F5B,
+  --light-blue: #E0ECFF,
+  --blue: #3485FF,
+  --background: #F6FAFF,
+  --overlay: #040911,
+  --icons-details: #A5B0C1,
+  
+  --gray-dark: #4D5E77,
+  --gray-blue: #A1B2CD,
+  --gray-light: #E5EAF1
+);
+
+@function color($color-name) {
+  @return map-get($map: $colors, $key: $color-name);
+}

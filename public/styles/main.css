@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+a, li, ul {
+  list-style: none;
+  text-decoration: none; }
+
+body {
+  height: 100vh;
+  background-color: #F6FAFF; }
+
+body, button, input, textarea {
+  font-size: clamp(14px, 1.6rem, 2vw);
+  /*
+    clamp: minimum-font-size, custom-font-size, maximum-font-size
+  */
+  font-family: 'Open Sans', sans-serif; }
+
+.content {
+  width: 100%;
+  margin: 0 auto; }
+
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0; }
+
+.input {
+  border-radius: .8rem;
+  height: 5rem; }
+
+.button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3485FF;
+  color: #FAFAFA;
+  transition: filter .2s;
+  cursor: pointer; }
+  .button:hover {
+    filter: brightness(1.2); }
+  .button > img {
+    margin-right: 1rem;
+    width: 2rem; }
+  .button.outlined {
+    background-color: #FAFAFA;
+    color: #3485FF;
+    border: 0.2rem solid #3485FF; }
+
+.content {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 11.4rem 1fr;
+  grid-template-areas: 'header header' 'left right'; }
+  .content header {
+    grid-area: header;
+    width: 80%;
+    margin: 3.5rem auto; }
+    .content header img {
+      width: 16.7rem; }
+  .content #bg {
+    grid-area: left;
+    background: url("/assets/home-bg.svg") no-repeat top/contain; }
+  .content main {
+    grid-area: right;
+    display: flex;
+    align-items: center; }
+    .content main .container {
+      width: min(36.3rem, 100%); }
+      .content main .container h2 {
+        font-family: 'Poppins', sans-serif; }
+      .content main .container form input {
+        border: 0.2rem solid #A1B2CD;
+        padding: 0 1.6rem; }
+      .content main .container form input, .content main .container form .button {
+        width: 100%;
+        margin-bottom: 1.8rem; }

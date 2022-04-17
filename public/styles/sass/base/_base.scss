@@ -1,0 +1,47 @@
+// RESET
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 10px
+}
+
+a, li, ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  background-color: color(--background);
+}
+
+body, button, input, textarea {
+  font-size: clamp(14px, 1.6rem, 2vw); 
+  /*
+    clamp: minimum-font-size, custom-font-size, maximum-font-size
+  */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+// for accessibility 
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
