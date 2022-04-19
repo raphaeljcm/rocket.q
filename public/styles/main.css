@@ -1,3 +1,13 @@
+.content main h1 {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-width: 0; }
+
 * {
   margin: 0;
   padding: 0;
@@ -12,30 +22,20 @@ a, li, ul {
   text-decoration: none; }
 
 body {
+  display: flex;
   height: 100vh;
   background-color: #F6FAFF; }
 
 body, button, input, textarea {
   font-size: clamp(14px, 1.6rem, 2vw);
   /*
-    clamp: minimum-font-size, custom-font-size, maximum-font-size
+    clamp: minimum-font-size, default-font-size, maximum-font-size
   */
   font-family: 'Open Sans', sans-serif; }
 
 .content {
   width: 100%;
   margin: 0 auto; }
-
-.sr-only {
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0; }
 
 .input {
   border-radius: .8rem;
@@ -62,6 +62,29 @@ body, button, input, textarea {
     color: #3485FF;
     border: 0.2rem solid #3485FF; }
 
+.separator {
+  display: flex;
+  align-items: center; }
+  .separator div:first-child,
+  .separator div:last-child {
+    background-color: #A1B2CD;
+    width: 100%;
+    height: 1px; }
+  .separator span {
+    color: #A1B2CD;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 0;
+    padding: 0 1.35rem; }
+
+.ball {
+  width: 21.2rem;
+  height: 21.2rem;
+  background-color: #3485FF;
+  clip-path: circle();
+  opacity: .1;
+  position: fixed; }
+
 .content {
   display: grid;
   grid-template-columns: 60% 40%;
@@ -75,18 +98,34 @@ body, button, input, textarea {
       width: 16.7rem; }
   .content #bg {
     grid-area: left;
-    background: url("/assets/home-bg.svg") no-repeat top/contain; }
+    background: url("/assets/home-bg.svg") no-repeat top/contain;
+    background-position-x: -7rem; }
+    .content #bg .ball.top {
+      width: 63.3rem;
+      height: 63.3rem;
+      top: -46rem;
+      right: -35rem; }
+    .content #bg .ball.bottom {
+      bottom: -15rem;
+      right: 5.6rem; }
   .content main {
     grid-area: right;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    margin-top: -12rem; }
     .content main .container {
       width: min(36.3rem, 100%); }
-      .content main .container h2 {
-        font-family: 'Poppins', sans-serif; }
-      .content main .container form input {
+      .content main .container section h2 {
+        font-family: 'Poppins', sans-serif;
+        color: #0D114F;
+        font-size: clamp(20px, 5vw, 2.8rem);
+        margin-bottom: 2.4rem; }
+      .content main .container section form input {
         border: 0.2rem solid #A1B2CD;
-        padding: 0 1.6rem; }
-      .content main .container form input, .content main .container form .button {
+        padding: 0 1.6rem;
+        outline: none; }
+      .content main .container section form input, .content main .container section form .button {
         width: 100%;
         margin-bottom: 1.8rem; }
+      .content main .container .separator {
+        margin: 4rem 0; }

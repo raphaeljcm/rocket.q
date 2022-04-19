@@ -1,0 +1,9 @@
+.ball {
+  width: 21.2rem;
+  height: 21.2rem;
+  background-color: color(--blue);
+  clip-path: circle();
+  opacity: .1;
+
+  position: fixed;
+}

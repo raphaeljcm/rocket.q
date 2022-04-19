@@ -16,6 +16,7 @@ a, li, ul {
 }
 
 body {
+  display: flex;
   height: 100vh;
   background-color: color(--background);
 }
@@ -23,7 +24,7 @@ body {
 body, button, input, textarea {
   font-size: clamp(14px, 1.6rem, 2vw); 
   /*
-    clamp: minimum-font-size, custom-font-size, maximum-font-size
+    clamp: minimum-font-size, default-font-size, maximum-font-size
   */
   font-family: 'Open Sans', sans-serif;
 }
@@ -31,17 +32,4 @@ body, button, input, textarea {
 .content {
   width: 100%;
   margin: 0 auto;
-}
-
-// for accessibility 
-.sr-only {
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
 }
