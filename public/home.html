@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   
   <title>Página Inicial - Rocket.Q</title>
 </head>
@@ -26,11 +26,11 @@
     <main>
       <h1>Entre como participante ou crie sua sala</h1>
       <div class="container">
-        <section>
+        <section id="enter-room">
           <h2>Entre como participante</h2>
           <form>
-            <input type="number" id="room-id" class="input" aria-label="Código da sala" placeholder="Código da sala">
-            <button class="input button">
+            <input type="number" id="room-id" placeholder="Código da sala">
+            <button class="button">
               <img src="./assets/enter-room.svg" alt="Entrar na sala">
               Entrar na sala
             </button>
@@ -43,9 +43,9 @@
           <div></div>
         </div>
   
-        <section>
+        <section id="create-room">
           <h2>Crie sua sala de forma fácil</h2>
-          <a href="/create-room.html" class="input button outlined"><img src="./assets/users.svg" alt="Criar sala">Criar sala</a>
+          <a href="/create-room.html" class="button outlined"><img src="./assets/users.svg" alt="Criar sala">Criar sala</a>
         </section>
       </div>  
     </main>

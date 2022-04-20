@@ -8,15 +8,71 @@
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   
   <title>Rocket.Q - Perguntas e Respostas</title>
 </head>
 <body>
   <div id="room" class="content">
     <header>
-      <img src="./assets/logo.svg" alt="Logo Rocket.Q">
+      <a href="#" aria-label="Clique aqui para ir para homepage">
+        <img src="./assets/logo.svg" alt="Logo Rocket.Q">
+      </a>
+
+      <div class="buttons">
+        <div class="button outlined" tabindex="0">
+          #323243
+          <img src="./assets/copy.svg" alt="Imagem com um ícone de copiar">
+        </div>
+        <a href="#" class="button">
+          <img src="./assets/users-white.svg" alt="Imagem com dois usuários">
+          Criar sala
+        </a>
+      </div>
     </header>
+
+    <main>
+      <section id="question-form">
+        <h2>Faça sua pergunta</h2>
+        <form action="">
+          <textarea name="question" id="question" placeholder="O que você quer perguntar?"></textarea>
+
+          <footer>
+            <div>
+              <img src="./assets/lock.svg" alt="Icone de um cadeado">
+              Esta pergunta é anônima
+            </div>
+            <button class="button">Enviar</button>
+          </footer>
+        </form>
+      </section>
+
+      <section id="questions">
+        <h2>Perguntas da comunidade</h2>
+        <div class="questions">
+          <div class="question-wrapper">
+            <div class="question-content">
+              <div class="user">
+                <img src="./assets/avatar.svg" alt="Icone de uma imagem de avatar">
+              </div>
+              <div class="question">
+                <p>Qual a diferença entre const, var e let no JavaScript?</p>
+              </div>
+            </div>
+            <div class="actions">
+              <a href="#">
+                <img src="./assets/check.svg" alt="Icone com o simbolo check, um V">
+                Marcar mensagem como lida
+              </a>
+              <a href="#">
+                <img src="./assets/trash.svg" alt="Icone de um lixo">
+                Excluir mensagem
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
 </body>
 </html>

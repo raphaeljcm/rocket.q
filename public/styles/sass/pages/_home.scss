@@ -1,4 +1,4 @@
-.content {
+#home.content {
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 11.4rem 1fr;
@@ -6,16 +6,6 @@
   grid-template-areas: 
   'header header'
   'left right';
-
-  header {
-    grid-area: header;
-    width: 80%;
-    margin: 3.5rem auto;
-
-    img {
-      width: 16.7rem;
-    }
-  }
 
   #bg {
     grid-area: left;
@@ -63,12 +53,14 @@
             border: .2rem solid color(--gray-blue);
             padding: 0 1.6rem;
             outline: none;
+            height: 5rem;
           }
-  
-          input, .button {
-            width: 100%;
-            margin-bottom: 1.8rem;
-          }
+        }
+
+        input, .button {
+          width: 100%;
+          margin-bottom: 1.8rem;
+          height: 5rem;
         }
       }
 

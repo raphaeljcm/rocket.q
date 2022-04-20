@@ -1,4 +1,4 @@
-.content main h1 {
+#home.content main h1, #room.content main #questions h2 {
   position: absolute;
   height: 1px;
   width: 1px;
@@ -36,15 +36,18 @@ body, button, input, textarea {
 .content {
   width: 100%;
   margin: 0 auto; }
-
-.input {
-  border-radius: .8rem;
-  height: 5rem; }
+  .content header {
+    grid-area: header;
+    width: 80%;
+    margin: 3.5rem auto; }
+    .content header img {
+      width: 16.7rem; }
 
 .button {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   line-height: 0;
+  border-radius: .8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,47 +88,100 @@ body, button, input, textarea {
   opacity: .1;
   position: fixed; }
 
-.content {
+#home.content {
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 11.4rem 1fr;
   grid-template-areas: 'header header' 'left right'; }
-  .content header {
-    grid-area: header;
-    width: 80%;
-    margin: 3.5rem auto; }
-    .content header img {
-      width: 16.7rem; }
-  .content #bg {
+  #home.content #bg {
     grid-area: left;
     background: url("/assets/home-bg.svg") no-repeat top/contain;
     background-position-x: -7rem; }
-    .content #bg .ball.top {
+    #home.content #bg .ball.top {
       width: 63.3rem;
       height: 63.3rem;
       top: -46rem;
       right: -35rem; }
-    .content #bg .ball.bottom {
+    #home.content #bg .ball.bottom {
       bottom: -15rem;
       right: 5.6rem; }
-  .content main {
+  #home.content main {
     grid-area: right;
     display: flex;
     align-items: center;
     margin-top: -12rem; }
-    .content main .container {
+    #home.content main .container {
       width: min(36.3rem, 100%); }
-      .content main .container section h2 {
+      #home.content main .container section h2 {
         font-family: 'Poppins', sans-serif;
         color: #0D114F;
         font-size: clamp(20px, 5vw, 2.8rem);
         margin-bottom: 2.4rem; }
-      .content main .container section form input {
+      #home.content main .container section form input {
         border: 0.2rem solid #A1B2CD;
         padding: 0 1.6rem;
-        outline: none; }
-      .content main .container section form input, .content main .container section form .button {
+        outline: none;
+        height: 5rem; }
+      #home.content main .container section input, #home.content main .container section .button {
         width: 100%;
-        margin-bottom: 1.8rem; }
-      .content main .container .separator {
+        margin-bottom: 1.8rem;
+        height: 5rem; }
+      #home.content main .container .separator {
         margin: 4rem 0; }
+
+#room.content {
+  display: block;
+  max-width: 90%; }
+  #room.content header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    #room.content header .buttons {
+      display: flex; }
+      #room.content header .buttons .button:nth-child(1) {
+        margin-right: .8rem;
+        padding: 1.3rem 1.6rem; }
+        #room.content header .buttons .button:nth-child(1) img {
+          margin-left: 2rem; }
+      #room.content header .buttons .button:nth-child(2) {
+        padding: 1.3rem 3.2rem; }
+      #room.content header .buttons .button img {
+        width: 2rem;
+        height: 2rem; }
+  #room.content main #question-form h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    color: #0D114F;
+    font-weight: 700;
+    line-height: 4.2rem;
+    margin-bottom: 2.4rem; }
+  #room.content main #question-form form {
+    border: 0.2rem solid #A1B2CD;
+    padding: 1.6rem;
+    border-radius: 0 .8rem .8rem .8rem;
+    margin-bottom: 1.6rem; }
+    #room.content main #question-form form textarea {
+      resize: none;
+      width: 100%;
+      outline: none;
+      background-color: transparent; }
+      #room.content main #question-form form textarea::placeholder {
+        color: #A1B2CD; }
+    #room.content main #question-form form footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      #room.content main #question-form form footer > div {
+        color: #A5B0C1;
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        align-items: center; }
+        #room.content main #question-form form footer > div img {
+          margin-right: .9rem; }
+      #room.content main #question-form form footer button {
+        height: auto;
+        padding: .8rem 2.4rem;
+        line-height: 2.4rem; }
