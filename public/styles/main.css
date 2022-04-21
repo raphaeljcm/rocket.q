@@ -122,9 +122,11 @@ body, button, input, textarea {
         padding: 0 1.6rem;
         outline: none;
         height: 5rem; }
+      #home.content main .container section form .button,
+      #home.content main .container section form input {
+        margin-bottom: 1.8rem; }
       #home.content main .container section input, #home.content main .container section .button {
         width: 100%;
-        margin-bottom: 1.8rem;
         height: 5rem; }
       #home.content main .container .separator {
         margin: 4rem 0; }
@@ -185,3 +187,36 @@ body, button, input, textarea {
         height: auto;
         padding: .8rem 2.4rem;
         line-height: 2.4rem; }
+  #room.content main #questions .question-wrapper {
+    background-color: #E0ECFF;
+    margin-bottom: .8rem;
+    border-radius: 0 .8rem .8rem .8rem;
+    padding: 2.4rem; }
+    #room.content main #questions .question-wrapper .question-content {
+      display: flex;
+      align-items: flex-start; }
+      #room.content main #questions .question-wrapper .question-content .user {
+        background-color: #3485FF;
+        clip-path: circle();
+        padding: 1.4rem; }
+      #room.content main #questions .question-wrapper .question-content p {
+        margin-left: 1.6rem;
+        word-break: break-word;
+        display: flex;
+        align-items: center;
+        min-height: 5.5rem; }
+    #room.content main #questions .question-wrapper .actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; }
+      #room.content main #questions .question-wrapper .actions > a {
+        display: flex;
+        align-items: center; }
+        #room.content main #questions .question-wrapper .actions > a > img {
+          margin-right: .8rem; }
+        #room.content main #questions .question-wrapper .actions > a + a {
+          margin-left: .8rem; }
+  #room.content main #questions .question-wrapper.read {
+    background-color: #EAECF2; }
+    #room.content main #questions .question-wrapper.read .question-content .user {
+      background-color: #A1B2CD; }

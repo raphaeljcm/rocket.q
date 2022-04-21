@@ -55,11 +55,15 @@
             outline: none;
             height: 5rem;
           }
+
+          .button,
+          input {
+            margin-bottom: 1.8rem;
+          }
         }
 
         input, .button {
           width: 100%;
-          margin-bottom: 1.8rem;
           height: 5rem;
         }
       }

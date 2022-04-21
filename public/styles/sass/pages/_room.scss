@@ -88,6 +88,57 @@
       h2 {
         @extend %sr-only;
       }
+
+      .question-wrapper {
+        background-color: color(--light-blue);
+        margin-bottom: .8rem;
+        border-radius: 0 .8rem .8rem .8rem;
+        padding: 2.4rem;
+
+        .question-content {
+          display: flex;
+          align-items: flex-start;
+
+          .user {
+            background-color: color(--blue);
+            clip-path: circle();
+            padding: 1.4rem;
+          }
+
+          p {
+            margin-left: 1.6rem;
+            word-break: break-word;
+            display: flex;
+            align-items: center;
+            min-height: 5.5rem;
+          }
+        }
+
+        .actions {
+          @include flexPosition(flex-end, center);
+
+          > a {
+            display: flex;
+            align-items: center;
+
+            > img {
+              margin-right: .8rem;
+            }
+
+            + a {
+              margin-left: .8rem;
+            }
+          }
+        }
+      }
+
+      .question-wrapper.read {
+        background-color: color(--gray-medium);
+
+        .question-content .user {
+          background-color: color(--gray-blue);
+        }
+      }
     }
   }
 }
