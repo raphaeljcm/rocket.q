@@ -9,3 +9,16 @@
   white-space: nowrap;
   border-width: 0;
 }
+
+%scroll-bar {
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: color(--gray-blue);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: color(--blue);
+    border-radius: 1rem;
+  }
+}

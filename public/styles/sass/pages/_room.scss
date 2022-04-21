@@ -103,6 +103,13 @@
     }
 
     #questions {
+      overflow-y: scroll;
+      padding: 3rem 0;
+      max-height: 63rem;
+
+      @extend %scroll-bar;
+      
+
       h2 {
         @extend %sr-only;
       }
