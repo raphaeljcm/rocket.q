@@ -46,7 +46,6 @@ body, button, input, textarea {
 .button {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  line-height: 0;
   border-radius: .8rem;
   display: flex;
   align-items: center;
@@ -64,6 +63,12 @@ body, button, input, textarea {
     background-color: #FAFAFA;
     color: #3485FF;
     border: 0.2rem solid #3485FF; }
+  .button.red {
+    background-color: #E83F5B;
+    color: #FAFAFA; }
+  .button.gray {
+    background-color: #E5EAF1;
+    color: #4D5E77; }
 
 .separator {
   display: flex;
@@ -220,3 +225,44 @@ body, button, input, textarea {
     background-color: #EAECF2; }
     #room.content main #questions .question-wrapper.read .question-content .user {
       background-color: #A1B2CD; }
+
+/* ------------- MODAL ------------ */
+.modal-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(4, 9, 17, 0.8); }
+  .modal-wrapper .modal {
+    width: min(59rem, 90%);
+    background-color: #FAFAFA;
+    margin: auto;
+    padding: 6.4rem;
+    border-radius: .8rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center; }
+    .modal-wrapper .modal h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      color: #0D114F; }
+    .modal-wrapper .modal p {
+      margin-bottom: 2.4rem;
+      color: #4D5E77; }
+    .modal-wrapper .modal form input {
+      margin-bottom: 4rem;
+      padding: 1.3rem 1.6rem;
+      border: 0.2rem solid #3485FF;
+      border-radius: .8rem;
+      outline: none;
+      width: min(30.2rem, 70%); }
+    .modal-wrapper .modal form .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .modal-wrapper .modal form .buttons > .button {
+        margin-right: .8rem; }
+      .modal-wrapper .modal form .buttons .button {
+        padding: 1.3rem 3.2rem; }
