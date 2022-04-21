@@ -7,11 +7,36 @@
   'header header'
   'left right';
 
+  @include responsive(md) {
+    grid-template-columns: 100%;
+    grid-template-rows: 11.4rem 1fr;
+    grid-template-areas: none;
+    justify-items: center;
+  }
+
+  header {
+    @include responsive(md) {
+      grid-area: initial;
+      display: flex;
+      justify-content: center;
+    }
+
+    > img {
+      @include responsive(md) {
+        width: 14.7rem;
+      }
+    }
+  }
+
   #bg {
     grid-area: left;
 
     background: url('/assets/home-bg.svg') no-repeat top/contain;
     background-position-x: -7rem;
+
+    @include responsive(md) {
+      display: none;
+    }
 
     .ball.top {
       width: 63.3rem;
@@ -32,6 +57,10 @@
     display: flex;
     align-items: center;
     margin-top: -12rem;
+
+    @include responsive(md) {
+      grid-area: initial;
+    }
 
     h1 {
       @extend %sr-only;

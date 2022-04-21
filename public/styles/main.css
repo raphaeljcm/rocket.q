@@ -16,6 +16,9 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 560px) {
+    html {
+      font-size: 55%; } }
 
 a, li, ul {
   list-style: none;
@@ -27,7 +30,7 @@ body {
   background-color: #F6FAFF; }
 
 body, button, input, textarea {
-  font-size: clamp(14px, 1.6rem, 2vw);
+  font-size: clamp(13px, 1.6rem, 2vw);
   /*
     clamp: minimum-font-size, default-font-size, maximum-font-size
   */
@@ -42,6 +45,52 @@ body, button, input, textarea {
     margin: 3.5rem auto; }
     .content header img {
       width: 16.7rem; }
+
+/* ------------- MODAL ------------ */
+.modal-wrapper.active {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(4, 9, 17, 0.8); }
+  .modal-wrapper.active .modal {
+    width: min(59rem, 90%);
+    background-color: #FAFAFA;
+    margin: auto;
+    padding: 6.4rem;
+    border-radius: .8rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center; }
+    .modal-wrapper.active .modal h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      color: #0D114F; }
+    .modal-wrapper.active .modal p {
+      margin-bottom: 2.4rem;
+      color: #4D5E77; }
+    .modal-wrapper.active .modal form input {
+      margin-bottom: 4rem;
+      padding: 1.3rem 1.6rem;
+      border: 0.2rem solid #3485FF;
+      border-radius: .8rem;
+      outline: none;
+      width: min(30.2rem, 90%); }
+    .modal-wrapper.active .modal form .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .8rem; }
+      .modal-wrapper.active .modal form .buttons .button {
+        padding: 1.3rem 2.2rem; }
+        @media (max-width: 560px) {
+          .modal-wrapper.active .modal form .buttons .button {
+            padding: 1.3rem 1.2rem; } }
+
+.modal-wrapper {
+  display: none; }
 
 .button {
   font-family: 'Poppins', sans-serif;
@@ -98,10 +147,27 @@ body, button, input, textarea {
   grid-template-columns: 60% 40%;
   grid-template-rows: 11.4rem 1fr;
   grid-template-areas: 'header header' 'left right'; }
+  @media (max-width: 760px) {
+    #home.content {
+      grid-template-columns: 100%;
+      grid-template-rows: 11.4rem 1fr;
+      grid-template-areas: none;
+      justify-items: center; } }
+  @media (max-width: 760px) {
+    #home.content header {
+      grid-area: initial;
+      display: flex;
+      justify-content: center; } }
+  @media (max-width: 760px) {
+    #home.content header > img {
+      width: 14.7rem; } }
   #home.content #bg {
     grid-area: left;
     background: url("/assets/home-bg.svg") no-repeat top/contain;
     background-position-x: -7rem; }
+    @media (max-width: 760px) {
+      #home.content #bg {
+        display: none; } }
     #home.content #bg .ball.top {
       width: 63.3rem;
       height: 63.3rem;
@@ -115,6 +181,9 @@ body, button, input, textarea {
     display: flex;
     align-items: center;
     margin-top: -12rem; }
+    @media (max-width: 760px) {
+      #home.content main {
+        grid-area: initial; } }
     #home.content main .container {
       width: min(36.3rem, 100%); }
       #home.content main .container section h2 {
@@ -144,15 +213,27 @@ body, button, input, textarea {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    @media (max-width: 560px) {
+      #room.content header {
+        flex-direction: column; } }
+    @media (max-width: 560px) {
+      #room.content header > a {
+        margin-bottom: 1rem; } }
     #room.content header .buttons {
       display: flex; }
       #room.content header .buttons .button:nth-child(1) {
         margin-right: .8rem;
         padding: 1.3rem 1.6rem; }
+        @media (max-width: 560px) {
+          #room.content header .buttons .button:nth-child(1) {
+            padding: .6rem 1rem; } }
         #room.content header .buttons .button:nth-child(1) img {
           margin-left: 2rem; }
       #room.content header .buttons .button:nth-child(2) {
         padding: 1.3rem 3.2rem; }
+        @media (max-width: 560px) {
+          #room.content header .buttons .button:nth-child(2) {
+            padding: .9rem 2rem; } }
       #room.content header .buttons .button img {
         width: 2rem;
         height: 2rem; }
@@ -214,6 +295,10 @@ body, button, input, textarea {
       display: flex;
       align-items: center;
       justify-content: flex-end; }
+      @media (max-width: 560px) {
+        #room.content main #questions .question-wrapper .actions {
+          justify-content: center;
+          margin-top: 1rem; } }
       #room.content main #questions .question-wrapper .actions > a {
         display: flex;
         align-items: center; }
@@ -225,44 +310,3 @@ body, button, input, textarea {
     background-color: #EAECF2; }
     #room.content main #questions .question-wrapper.read .question-content .user {
       background-color: #A1B2CD; }
-
-/* ------------- MODAL ------------ */
-.modal-wrapper {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(4, 9, 17, 0.8); }
-  .modal-wrapper .modal {
-    width: min(59rem, 90%);
-    background-color: #FAFAFA;
-    margin: auto;
-    padding: 6.4rem;
-    border-radius: .8rem;
-    font-family: 'Poppins', sans-serif;
-    text-align: center; }
-    .modal-wrapper .modal h2 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin-bottom: 1.2rem;
-      color: #0D114F; }
-    .modal-wrapper .modal p {
-      margin-bottom: 2.4rem;
-      color: #4D5E77; }
-    .modal-wrapper .modal form input {
-      margin-bottom: 4rem;
-      padding: 1.3rem 1.6rem;
-      border: 0.2rem solid #3485FF;
-      border-radius: .8rem;
-      outline: none;
-      width: min(30.2rem, 70%); }
-    .modal-wrapper .modal form .buttons {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .modal-wrapper .modal form .buttons > .button {
-        margin-right: .8rem; }
-      .modal-wrapper .modal form .buttons .button {
-        padding: 1.3rem 3.2rem; }

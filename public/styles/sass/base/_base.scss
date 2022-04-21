@@ -8,6 +8,10 @@
 
 html {
   font-size: 62.5%; // 10px
+
+  @include responsive(sm) {
+    font-size: 55%;
+  }
 }
 
 a, li, ul {
@@ -22,7 +26,7 @@ body {
 }
 
 body, button, input, textarea {
-  font-size: clamp(14px, 1.6rem, 2vw); 
+  font-size: clamp(13px, 1.6rem, 2vw); 
   /*
     clamp: minimum-font-size, default-font-size, maximum-font-size
   */
@@ -40,6 +44,8 @@ body, button, input, textarea {
 
     img {
       width: 16.7rem;
+
+      
     }
   }
 }
