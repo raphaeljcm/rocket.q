@@ -2,12 +2,16 @@
 .modal-wrapper {
   width: 100vw;
   height: 100vh;
-  display: none;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
-
   background-color: rgba(4, 9, 17, .8);
+  visibility: hidden;
+  opacity: 0;
+  
+  transition: all 300ms ease;
+
 
   .modal {
     width: #{"min(59rem, 90%)"};
@@ -57,5 +61,7 @@
 }
 
 .modal-wrapper.active {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms ease;
 }

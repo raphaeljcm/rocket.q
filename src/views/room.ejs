@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="/styles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <script defer type="module" src="scripts/main.js"></script>
+  <script defer type="module" src="/scripts/main.js"></script>
   
   <title>Rocket.Q - Perguntas e Respostas</title>
 </head>
@@ -18,16 +18,16 @@
   <div id="room" class="content">
     <header>
       <a href="/" aria-label="Clique aqui para ir para homepage">
-        <img src="images/logo.svg" alt="Logo Rocket.Q">
+        <img src="/images/logo.svg" alt="Logo Rocket.Q">
       </a>
 
       <div class="buttons">
-        <div class="button outlined" tabindex="0">
+        <div class="button outlined" tabindex="0" id="room-id" data-id="323243">
           #323243
-          <img src="images/copy.svg" alt="Imagem com um ícone de copiar">
+          <img src="/images/copy.svg" alt="Imagem com um ícone de copiar">
         </div>
         <a href="/create-pass" class="button">
-          <img src="images/users-white.svg" alt="Imagem com dois usuários">
+          <img src="/images/users-white.svg" alt="Imagem com dois usuários">
           Criar sala
         </a>
       </div>
@@ -41,7 +41,7 @@
 
           <footer>
             <div>
-              <img src="images/lock.svg" alt="Icone de um cadeado">
+              <img src="/images/lock.svg" alt="Icone de um cadeado">
               Esta pergunta é anônima
             </div>
             <button class="button">Enviar</button>
@@ -55,19 +55,19 @@
           <div class="question-wrapper">
             <div class="question-content">
               <div class="user">
-                <img src="images/user.svg" alt="Icone de uma imagem de avatar">
+                <img src="/images/user.svg" alt="Icone de uma imagem de avatar">
               </div>
               <div class="question">
                 <p>Qual a diferença entre const, var e let no JavaScript?</p>
               </div>
             </div>
             <div class="actions">
-              <a href="#" class="check">
-                <img src="images/check.svg" alt="Icone com o simbolo check, um V">
+              <a href="#" class="check" data-id="2">
+                <img src="/images/check.svg" alt="Icone com o simbolo check, um V">
                 Marcar pergunta como lida
               </a>
-              <a href="#" class="delete">
-                <img src="images/trash.svg" alt="Icone de um lixo">
+              <a href="#" class="delete" data-id="2">
+                <img src="/images/trash.svg" alt="Icone de um lixo">
                 Excluir pergunta
               </a>
             </div>
@@ -75,19 +75,19 @@
           <div class="question-wrapper">
             <div class="question-content">
               <div class="user">
-                <img src="images/user.svg" alt="Icone de uma imagem de avatar">
+                <img src="/images/user.svg" alt="Icone de uma imagem de avatar">
               </div>
               <div class="question">
                 <p>O que é Typescript?</p>
               </div>
             </div>
             <div class="actions">
-              <a href="#" class="check">
-                <img src="images/check.svg" alt="Icone com o simbolo check, um V">
+              <a href="#" class="check" data-id="3">
+                <img src="/images/check.svg" alt="Icone com o simbolo check, um V">
                 Marcar pergunta como lida
               </a>
-              <a href="#" class="delete">
-                <img src="images/trash.svg" alt="Icone de um lixo">
+              <a href="#" class="delete" data-id="3">
+                <img src="/images/trash.svg" alt="Icone de um lixo">
                 Excluir pergunta
               </a>
             </div>
@@ -95,15 +95,15 @@
           <div class="question-wrapper read">
             <div class="question-content">
               <div class="user">
-                <img src="images/user.svg" alt="Icone de uma imagem de avatar">
+                <img src="/images/user.svg" alt="Icone de uma imagem de avatar">
               </div>
               <div class="question">
                 <p>O que é JavaScript?</p>
               </div>
             </div>
             <div class="actions">
-              <a href="#" class="check">
-                <img src="images/check.svg" alt="Icone com o simbolo check, um V">
+              <a href="#" class="check" data-id="1">
+                <img src="/images/check.svg" alt="Icone com o simbolo check, um V">
                 Pergunta lida
               </a>
             </div>
@@ -111,19 +111,19 @@
           <div class="question-wrapper">
             <div class="question-content">
               <div class="user">
-                <img src="images/user.svg" alt="Icone de uma imagem de avatar">
+                <img src="/images/user.svg" alt="Icone de uma imagem de avatar">
               </div>
               <div class="question">
                 <p>O que é Typescript?</p>
               </div>
             </div>
             <div class="actions">
-              <a href="#" class="check">
-                <img src="images/check.svg" alt="Icone com o simbolo check, um V">
+              <a href="#" class="check" data-id="4">
+                <img src="/images/check.svg" alt="Icone com o simbolo check, um V">
                 Marcar pergunta como lida
               </a>
-              <a href="#" class="delete">
-                <img src="images/trash.svg" alt="Icone de um lixo">
+              <a href="#" class="delete" data-id="4">
+                <img src="/images/trash.svg" alt="Icone de um lixo">
                 Excluir pergunta
               </a>
             </div>
@@ -131,19 +131,19 @@
           <div class="question-wrapper">
             <div class="question-content">
               <div class="user">
-                <img src="images/user.svg" alt="Icone de uma imagem de avatar">
+                <img src="/images/user.svg" alt="Icone de uma imagem de avatar">
               </div>
               <div class="question">
                 <p>O que é Typescript?</p>
               </div>
             </div>
             <div class="actions">
-              <a href="#" class="check">
-                <img src="images/check.svg" alt="Icone com o simbolo check, um V">
+              <a href="#" class="check" data-id="5">
+                <img src="/images/check.svg" alt="Icone com o simbolo check, um V">
                 Marcar pergunta como lida
               </a>
-              <a href="#" class="delete">
-                <img src="images/trash.svg" alt="Icone de um lixo">
+              <a href="#" class="delete" data-id="5">
+                <img src="/images/trash.svg" alt="Icone de um lixo">
                 Excluir pergunta
               </a>
             </div>
@@ -151,19 +151,19 @@
           <div class="question-wrapper">
             <div class="question-content">
               <div class="user">
-                <img src="images/user.svg" alt="Icone de uma imagem de avatar">
+                <img src="/images/user.svg" alt="Icone de uma imagem de avatar">
               </div>
               <div class="question">
                 <p>O que é Typescript?</p>
               </div>
             </div>
             <div class="actions">
-              <a href="#" class="check">
-                <img src="images/check.svg" alt="Icone com o simbolo check, um V">
+              <a href="#" class="check" data-id="6">
+                <img src="/images/check.svg" alt="Icone com o simbolo check, um V">
                 Marcar pergunta como lida
               </a>
-              <a href="#" class="delete">
-                <img src="images/trash.svg" alt="Icone de um lixo">
+              <a href="#" class="delete" data-id="6">
+                <img src="/images/trash.svg" alt="Icone de um lixo">
                 Excluir pergunta
               </a>
             </div>
@@ -179,12 +179,12 @@
       <h2>Excluir pergunta</h2>
       <p>Tem certeza que você deseja excluir esta pergunta?</p>
 
-      <form action="">
+      <form action="#" method="POST" id="form-delete">
         <input type="password" name="password" id="password" placeholder="Digite sua senha">
 
         <div class="buttons">
           <div class="button gray" id="cancel">Cancelar</div>
-          <button class="button red">Sim, excluir</button>
+          <button class="button red" form="form-delete">Sim, excluir</button>
         </div>
       </form>
     </div>

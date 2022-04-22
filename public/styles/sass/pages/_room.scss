@@ -145,6 +145,10 @@
             justify-content: center;
             margin-top: 1rem;
           }
+          
+          a {
+            color: color(--gray-dark);
+          }
 
           > a {
             display: flex;

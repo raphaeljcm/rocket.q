@@ -61,11 +61,14 @@ body, button, input, textarea {
 .modal-wrapper {
   width: 100vw;
   height: 100vh;
-  display: none;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(4, 9, 17, 0.8); }
+  background-color: rgba(4, 9, 17, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms ease; }
   .modal-wrapper .modal {
     width: min(59rem, 90%);
     background-color: #FAFAFA;
@@ -101,7 +104,9 @@ body, button, input, textarea {
             padding: 1.3rem 1.2rem; } }
 
 .modal-wrapper.active {
-  display: flex; }
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms ease; }
 
 .button {
   font-family: 'Poppins', sans-serif;
@@ -129,6 +134,8 @@ body, button, input, textarea {
   .button.gray {
     background-color: #E5EAF1;
     color: #4D5E77; }
+    .button.gray:hover {
+      filter: grayscale(1); }
 
 .separator {
   display: flex;
@@ -314,6 +321,8 @@ body, button, input, textarea {
           #room.content main #questions .question-wrapper .actions {
             justify-content: center;
             margin-top: 1rem; } }
+        #room.content main #questions .question-wrapper .actions a {
+          color: #4D5E77; }
         #room.content main #questions .question-wrapper .actions > a {
           display: flex;
           align-items: center; }

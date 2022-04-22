@@ -35,5 +35,9 @@
   &.gray{
     background-color: color(--gray-light);
     color: color(--gray-dark);
+
+    &:hover {
+      filter: grayscale(1);
+    }
   }
 }
