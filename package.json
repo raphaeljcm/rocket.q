@@ -1,16 +1,17 @@
 {
   "name": "rocket.q",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Projeto desenvolvido para gerenciar perguntas anômimas de usuários direcionadas ao dono da página. Projeto desenvolvido na semana NLW Rocketseat na missão Discover",
+  "main": "src/app.js",
   "scripts": {
-    "watch": "node-sass ./public/styles/sass/main.scss ./public/styles/main.css -w",
-    "start": "nodemon ./src/app.js"
+    "watch": "node-sass public/styles/sass/main.scss public/styles/main.css -w",
+    "start": "nodemon ."
   },
   "keywords": [],
-  "author": "",
+  "author": "Raphael Marques",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.7",
     "express": "^4.17.3"
   },
   "devDependencies": {

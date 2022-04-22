@@ -31,7 +31,7 @@
   #bg {
     grid-area: left;
 
-    background: url('/assets/home-bg.svg') no-repeat top/contain;
+    background: url('/images/home-bg.svg') no-repeat top/contain;
     background-position-x: -7rem;
 
     @include responsive(md) {

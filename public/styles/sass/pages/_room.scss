@@ -105,10 +105,9 @@
     #questions {
       overflow-y: scroll;
       padding: 3rem 0;
-      max-height: 63rem;
+      max-height: 60vh;
 
       @extend %scroll-bar;
-      
 
       h2 {
         @extend %sr-only;

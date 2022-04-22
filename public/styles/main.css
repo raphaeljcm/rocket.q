@@ -37,6 +37,7 @@ a, li, ul {
 body {
   display: flex;
   height: 100vh;
+  overflow-y: hidden;
   background-color: #F6FAFF; }
 
 body, button, input, textarea {
@@ -57,15 +58,15 @@ body, button, input, textarea {
       width: 16.7rem; }
 
 /* ------------- MODAL ------------ */
-.modal-wrapper.active {
+.modal-wrapper {
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(4, 9, 17, 0.8); }
-  .modal-wrapper.active .modal {
+  .modal-wrapper .modal {
     width: min(59rem, 90%);
     background-color: #FAFAFA;
     margin: auto;
@@ -73,34 +74,34 @@ body, button, input, textarea {
     border-radius: .8rem;
     font-family: 'Poppins', sans-serif;
     text-align: center; }
-    .modal-wrapper.active .modal h2 {
+    .modal-wrapper .modal h2 {
       font-size: 2.4rem;
       font-weight: 700;
       margin-bottom: 1.2rem;
       color: #0D114F; }
-    .modal-wrapper.active .modal p {
+    .modal-wrapper .modal p {
       margin-bottom: 2.4rem;
       color: #4D5E77; }
-    .modal-wrapper.active .modal form input {
+    .modal-wrapper .modal form input {
       margin-bottom: 4rem;
       padding: 1.3rem 1.6rem;
       border: 0.2rem solid #3485FF;
       border-radius: .8rem;
       outline: none;
       width: min(30.2rem, 90%); }
-    .modal-wrapper.active .modal form .buttons {
+    .modal-wrapper .modal form .buttons {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: .8rem; }
-      .modal-wrapper.active .modal form .buttons .button {
+      .modal-wrapper .modal form .buttons .button {
         padding: 1.3rem 2.2rem; }
         @media (max-width: 560px) {
-          .modal-wrapper.active .modal form .buttons .button {
+          .modal-wrapper .modal form .buttons .button {
             padding: 1.3rem 1.2rem; } }
 
-.modal-wrapper {
-  display: none; }
+.modal-wrapper.active {
+  display: flex; }
 
 .button {
   font-family: 'Poppins', sans-serif;
@@ -173,7 +174,7 @@ body, button, input, textarea {
       width: 14.7rem; } }
   #home.content #bg {
     grid-area: left;
-    background: url("/assets/home-bg.svg") no-repeat top/contain;
+    background: url("/images/home-bg.svg") no-repeat top/contain;
     background-position-x: -7rem; }
     @media (max-width: 760px) {
       #home.content #bg {
@@ -286,7 +287,7 @@ body, button, input, textarea {
   #room.content main #questions {
     overflow-y: scroll;
     padding: 3rem 0;
-    max-height: 63rem; }
+    max-height: 60vh; }
     #room.content main #questions .question-wrapper {
       background-color: #E0ECFF;
       margin-bottom: .8rem;
