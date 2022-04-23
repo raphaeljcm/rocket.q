@@ -29,3 +29,11 @@
     }
   }
 }
+
+@mixin responsiveHeight($breakpoint) {
+  @if($breakpoint == md) {
+    @media(max-height: 800px) {
+      @content;
+    }
+  }
+}

@@ -68,7 +68,7 @@ body, button, input, textarea {
   background-color: rgba(4, 9, 17, 0.8);
   visibility: hidden;
   opacity: 0;
-  transition: all 300ms ease; }
+  transition: all 200ms ease; }
   .modal-wrapper .modal {
     width: min(59rem, 90%);
     background-color: #FAFAFA;
@@ -295,6 +295,9 @@ body, button, input, textarea {
     overflow-y: scroll;
     padding: 3rem 0;
     max-height: 60vh; }
+    @media (max-height: 800px) {
+      #room.content main #questions {
+        max-height: 45vh; } }
     #room.content main #questions .question-wrapper {
       background-color: #E0ECFF;
       margin-bottom: .8rem;
@@ -332,5 +335,8 @@ body, button, input, textarea {
             margin-left: .8rem; }
     #room.content main #questions .question-wrapper.read {
       background-color: #EAECF2; }
+      #room.content main #questions .question-wrapper.read .actions a:first-child {
+        cursor: not-allowed;
+        pointer-events: none; }
       #room.content main #questions .question-wrapper.read .question-content .user {
         background-color: #A1B2CD; }

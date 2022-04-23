@@ -109,6 +109,10 @@
 
       @extend %scroll-bar;
 
+      @include responsiveHeight(md) {
+        max-height: 45vh; 
+      }
+
       h2 {
         @extend %sr-only;
       }
@@ -167,6 +171,11 @@
 
       .question-wrapper.read {
         background-color: color(--gray-medium);
+
+        .actions a:first-child {
+          cursor: not-allowed;
+          pointer-events: none;
+        }
 
         .question-content .user {
           background-color: color(--gray-blue);
