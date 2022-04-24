@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Rocket.Q" title="Rocket.Q" src=".github/images/rocketq.png" width="220px" />
+  <img alt="Rocket.Q" title="Rocket.Q" src="public/images/rocketq.png" width="220px" />
 </h1>
 
 <p align="center">
@@ -16,7 +16,7 @@
 <br>
 
 <p align="center">
-  <img alt="Rocket.Q" src=".github/images/capa.png" width="100%">
+  <img alt="Rocket.Q" src="public/images/capa.png" width="100%">
 </p>
 
 ## 🚀 Technologies
