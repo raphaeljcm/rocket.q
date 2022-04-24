@@ -68,7 +68,7 @@ body, button, input, textarea {
   background-color: rgba(4, 9, 17, 0.8);
   visibility: hidden;
   opacity: 0;
-  transition: all 200ms ease; }
+  transition: all .3s ease; }
   .modal-wrapper .modal {
     width: min(59rem, 90%);
     background-color: #FAFAFA;
@@ -214,6 +214,9 @@ body, button, input, textarea {
         padding: 0 1.6rem;
         outline: none;
         height: 5rem; }
+      #home.content main .container section form span {
+        display: inline-block;
+        margin-bottom: 1rem; }
       #home.content main .container section form .button,
       #home.content main .container section form input {
         margin-bottom: 1.8rem; }
@@ -298,6 +301,24 @@ body, button, input, textarea {
     @media (max-height: 800px) {
       #room.content main #questions {
         max-height: 45vh; } }
+    #room.content main #questions .no-questions {
+      text-align: center;
+      margin-top: 5.2rem; }
+      #room.content main #questions .no-questions img {
+        max-width: 100%;
+        margin-bottom: 1.2rem; }
+      #room.content main #questions .no-questions p:first-of-type {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #0D114F; }
+      #room.content main #questions .no-questions p:last-child {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-top: 1.3rem;
+        line-height: 1.9rem;
+        color: #4D5E77; }
     #room.content main #questions .question-wrapper {
       background-color: #E0ECFF;
       margin-bottom: .8rem;

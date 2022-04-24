@@ -52,6 +52,9 @@
       <section id="questions">
         <h2>Perguntas da comunidade</h2>
         <div class="questions">
+          <% if (isNoQuestions) { %>
+            <%- include('partials/noquestion') %>
+          <% } %>
           <% questions.forEach(question => { %>
             <% if (!question.read) { %>
               <div class="question-wrapper">
@@ -111,7 +114,7 @@
       <p>Tem certeza que você deseja excluir esta pergunta?</p>
 
       <form action="#" method="POST" id="form-delete">
-        <input type="password" name="password" id="password" placeholder="Digite sua senha">
+        <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
 
         <div class="buttons">
           <div class="button gray" id="cancel">Cancelar</div>

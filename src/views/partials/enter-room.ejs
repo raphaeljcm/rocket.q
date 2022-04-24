@@ -3,9 +3,12 @@
   <div class="container">
     <section id="enter-room">
       <h2>Entre como participante</h2>
-      <form>
-        <input type="number" id="room-id" placeholder="Código da sala">
-        <button class="button">
+      <form action="/room/enter-room" method="POST" id="form-enter-room">
+        <input type="number" name="roomId" id="room-id" placeholder="Código da sala">
+        <% if (error) { %>
+          <span><%= error %></span>
+        <% } %>
+        <button class="button" form="form-enter-room">
           <img src="/images/enter-room.svg" alt="Entrar na sala">
           Entrar na sala
         </button>

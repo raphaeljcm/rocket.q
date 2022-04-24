@@ -44,8 +44,16 @@ function handleModal() {
   }
 }
 
+function copyToClickboard() {
+  document.querySelector('#room-id').addEventListener('click', e => {
+    const value = e.target.innerText.replace('#', '');
+    navigator.clipboard.writeText(value);
+  });
+}
+
 function init() {
   handleModal();
+  copyToClickboard();
 }
 
 window.onload = init();

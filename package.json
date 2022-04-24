@@ -11,10 +11,12 @@
   "author": "Raphael Marques",
   "license": "ISC",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "bcryptjs": "^2.4.3",
     "ejs": "^3.1.7",
     "express": "^4.17.3",
-    "mongoose": "^6.3.1"
+    "mongoose": "^6.3.1",
+    "socket.io": "^4.5.0"
   },
   "devDependencies": {
     "node-sass": "^7.0.1",
