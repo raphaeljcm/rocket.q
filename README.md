@@ -30,6 +30,7 @@ This project was developed with the following technologies:
 - EJS
 - Express
 - MongoDB
+- Mongoose
 - bcryptjs
 - Joi 
 
