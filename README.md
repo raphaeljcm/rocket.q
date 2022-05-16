@@ -47,7 +47,7 @@ Download this repositorie and with your teminal, enter in the directory. Before,
 3. Now, it will run and create the DB LOCALLY automatically, to have a better experience use Mongo DB Compass
 
 ## Changes 
-I have been studying backend for a while and this project helped me to practice everything. Rocketseat gave everything working fine so what I did was made a refactoring and put all my knolege into it. I made updates on the frontend and also on the backend as follows:
+I have been studying backend for a while and this project helped me to practice everything. Rocketseat gave everything working fine so what I did was made a refactoring and put all my knowledge into it. I made updates on the frontend and also on the backend as follows:
 - Put everything the way I like 
 - Architeture, I changed it completely to something I find it easy to understand
 - The database, they used SQL Lite, I changed it to MongoDB
